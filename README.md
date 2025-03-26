@@ -27,10 +27,12 @@ Pemecah Sudoku adalah sebuah aplikasi web interaktif yang memungkinkan pengguna 
 ## Struktur Proyek
 ```
 pemecah-sudoku/
-│── index.html   # Halaman utama
-│── style.css    # Styling tampilan web
-│── script.js    # Logika pemecahan Sudoku
-│── contoh.png   # Contoh teka-teki Sudoku
-│── salah.png    # Contoh kesalahan Sudoku
-│── salah2.png   # Contoh kesalahan Sudoku lainnya
+├── index.html       # Halaman utama
+├── script.js        # Logika pemecahan Sudoku
+├── style.css        # Styling tampilan web
+├── README.md        # File ini
+└── gambar           # Folder untuk menyimpan gambar
+    ├── contoh.png   # Contoh teka-teki Sudoku
+    ├── salah.png    # Contoh kesalahan Sudoku
+    └── salah2.png   # Contoh kesalahan Sudoku lainnya
 ```
