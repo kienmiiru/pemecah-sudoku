@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemecah Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <ul>
+        <li><a href="#pengantar">Pengantar</a></li>
+        <li><a href="#aturan">Aturan</a></li>
+        <li><a href="#metode">Metode</a></li>
+        <li><a href="#demo">Demo</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Sudoku dan Metode Penyelesaiannya Menggunakan Backtracking</h1>
+      <h2 id="pengantar">Pengantar</h2>
+      <p>
+        Sudoku adalah permainan teka-teki angka berbasis logika yang sangat
+        populer di seluruh dunia. Teka-teki ini biasanya berbentuk kotak 9x9
+        yang dibagi menjadi sembilan sub-kotak 3x3. Tujuan dari permainan ini
+        adalah mengisi setiap kotak dengan angka 1-9 sedemikian rupa sehingga
+        setiap baris, kolom, dan sub-kotak 3x3 berisi angka yang berbeda tanpa
+        pengulangan.
+      </p>
+      <div style="text-align: center">
+        <img src="contoh.png" alt="contoh teka-teki sudoku" />
+        <p>Contoh Teka-Teki Sudoku</p>
+      </div>
+
+      <h2 id="aturan">Aturan Dasar Sudoku</h2>
+      <ol>
+        <li>Setiap baris harus berisi angka 1-9 tanpa pengulangan.</li>
+        <li>Setiap kolom harus berisi angka 1-9 tanpa pengulangan.</li>
+        <li>Setiap sub-kotak 3x3 harus berisi angka 1-9 tanpa pengulangan.</li>
+      </ol>
+      <div style="text-align: center">
+        <img src="salah.png" alt="contoh teka-teki sudoku" />
+        <p>Contoh Tebakan yang Salah (Melanggar Aturan 1)</p>
+      </div>
+      <div style="text-align: center">
+        <img src="salah2.png" alt="contoh teka-teki sudoku" />
+        <p>Contoh Tebakan yang Salah (Melanggar Aturan 3)</p>
+      </div>
+
+      <h2 id="metode">Metode Penyelesaian Sudoku</h2>
+      <p>
+        Salah satu metode yang paling umum dan efisien untuk menyelesaikan
+        Sudoku adalah backtracking. Backtracking adalah teknik rekursif yang
+        mencoba berbagai kemungkinan solusi dan mundur (backtrack) jika menemui
+        jalan buntu. Berikut adalah langkah-langkah penyelesaian Sudoku
+        menggunakan metode backtracking:
+      </p>
+      <ol>
+        <li>Cari Kotak Kosong: Cari sel pertama yang belum diisi.</li>
+        <li>
+          Coba Angka 1-9: Masukkan angka dari 1 hingga 9 dan periksa apakah
+          angka tersebut valid sesuai aturan Sudoku.
+        </li>
+        <li>
+          Rekursi: Jika angka yang dimasukkan valid, lanjutkan ke kotak kosong
+          berikutnya dan ulangi proses ini.
+        </li>
+        <li>
+          Backtrack Jika Perlu: Jika tidak ada angka yang bisa dimasukkan ke
+          dalam kotak, mundur ke kotak sebelumnya dan coba angka lain.
+        </li>
+        <li>
+          Selesai: Proses berlanjut hingga semua kotak terisi dengan angka yang
+          valid.
+        </li>
+      </ol>
+
+      <h2 id="demo">Demo Backtracking</h2>
+      <p>
+        Di sini Anda dapat mencoba pemecah sudoku yang menggunakan backtracking
+        seperti penjelasan di atas (tips: nyalakan opsi perlambat untuk melihat
+        bagaimana backtracking-nya terjadi):
+      </p>
+      <div id="sudoku">
+        <input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" /><input
+          type="text"
+          maxlength="1"
+        /><input type="text" maxlength="1" />
+      </div>
+      <div style="text-align: center">
+        <button id="solve">Pecahkan</button>
+        <input type="checkbox" name="perlambat" id="perlambat" />
+        <label for="perlambat">Perlambat</label>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
